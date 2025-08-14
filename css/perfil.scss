@@ -1,0 +1,61 @@
+/*COLORES*/
+$negro: #333;
+$verdeClaro: #7DD888;;
+$verdeFuerte: #25865B;
+$gris: rgba(0, 0, 0, .2);
+
+/*ESTILOS GENERALES*/
+body {
+    color: $negro;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none !important;
+    &.btn-primary {
+        background-color: $verdeFuerte;
+    }
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    font-weight: bold !important;
+}
+
+/*FORMULARIO*/
+.formulario-registro-usuario {
+    input {
+        margin-bottom: 15px;
+        border-radius: 0;
+        &[type='text'] { 
+            display: inline-block;
+            padding: 15px 10px;
+            border: 1px solid $gris;
+            width: 100%;
+            outline: none;
+        }
+    }
+    a {
+        color: $verdeClaro;
+    }
+    select {
+        display: inline-block;
+        padding: 15px 10px;
+        border: 1px solid $gris;
+        width: 100%;
+        outline: none;
+        margin-bottom: 15px;
+    }
+}
+
+.no-login p {
+    font-size: 22px;
+    a {
+        color: $verdeClaro;
+    }
+}

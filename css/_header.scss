@@ -1,0 +1,267 @@
+.menu-principal {
+    background-color: $blanco;
+    transition: all .6s ease;
+    transition: all .6s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 80;
+    top: 0;
+    border-bottom: 2px solid $verdeClaro;
+    box-shadow: 0 0 40px 0 rgba($color: $negro, $alpha: .6);
+}
+
+.menu {
+    // position: relative;
+    .nombre-usuario {
+        cursor: pointer;
+        &:hover {
+            color: $negro !important;
+        }
+        .icono.usuario {
+            font-size: 25px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+    .btn-img-carrito,
+    .btn-img-buscar {
+        cursor: pointer;
+    }
+    .btn-img-buscar{
+        margin-left: 20px;
+    }
+}
+.navbar-nav {
+    .nav-link {
+        @media screen and (min-width: 1200px) {
+            margin-left: 90px;
+        }
+        &:hover {
+            color: $verdeFuerte;
+        }
+        &.btn-iniciar-sesion {
+            border: 2px solid transparent;
+            color: $negro;
+            letter-spacing: 2px;
+            transition: all .6s ease;
+            &:hover {
+                border-color: $negro;
+            }
+        }
+    }
+    .nombre-usuario {
+        font-weight: bold;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-family: 'Mansalva', cursive;
+    }
+}
+
+.carrito {
+    position: fixed;
+    width: 90%;
+    left: 5%;
+    margin: 0 auto !important;
+    background-color: $blanco;
+    // right: 0;
+    z-index: 90;
+    box-shadow: 0px 0px 15px 0px rgba($color: $negro, $alpha: .6);
+    opacity: 0;
+    transform: scale(0);
+    transition: all .6s ease;
+    height: 400px;
+    overflow-y: scroll;
+    top: 275px;
+    @media screen and (min-width: 768px) {
+        width: 500px;
+        left: unset;
+        top: unset;
+        right: 0;
+    }
+    .numero-productos,
+    .total {
+        font-weight: bold;
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background: rgb(240, 240, 240);
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #b3b3b3;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background-color: $verdeFuerte;
+        box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    }
+    &::-webkit-scrollbar-thumb:active {
+        background-color: $verdeFuerte;
+    }
+    &.active {
+        opacity: 1;
+        transform: scale(1);
+    }
+    .table {
+        td {
+            vertical-align: middle !important;
+            border-top: none;
+            &:nth-child(3) {
+                white-space: nowrap;
+            }
+        }
+    }
+    .imagen-producto {
+        // background-color: $gris;
+        img {
+            height: 90px;
+        }
+    }
+    .btn-incremento-decremento {
+        display: inline-block;
+        border: 1px solid $gris2;
+        width: 30px;
+        height: 30px;
+        line-height: 25px;
+        font-weight: bold;
+        font-size: 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover {
+            color: $verdeFuerte;
+        }
+    }
+    .icono-borrar {
+        cursor: pointer;
+    }
+}
+
+.iniciar-sesion {
+    position: fixed;
+    z-index: 80;
+    background-color: $blanco;
+    width: 90%;
+    left: 5%;
+    top: 275px;
+    box-shadow: 0px 0px 15px 0px rgba($color: $negro, $alpha: .6);
+    opacity: 0;
+    transform: scale(0) translateY(90px);
+    transition: all .6s ease;
+    @media screen and (min-width: 768px) {
+        width: 400px;
+        top: unset;
+        left: unset;
+        right: 40%;
+    }
+    &.active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    input[type='email'],
+    input[type='password'] {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        outline: none;
+        border: 1px solid $gris2;
+    }
+    input[type='submit'] {
+        cursor: pointer;
+    }
+    a.registrate {
+        color: $verdeClaro;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .usuario-cliente-acciones {
+        a {
+            .icono {
+                margin-right: 10px;
+            }
+        }
+        .cerrar-sesion-cliente {
+            letter-spacing: 2px;
+            &:hover {
+                color: rgba(247, 0, 0, .8);
+                text-decoration: underline;
+            } 
+        }
+        .acciones {
+            a {
+                &:hover {
+                    color: $verdeFuerte;
+                }
+            }
+        }
+    }
+}
+
+.buscar {
+    position: fixed;
+    z-index: 100;
+    background-color: $blanco;
+    width: 90%;
+    left: 5%;
+    padding: 10px;
+    box-shadow: 0px 0px 15px 0px rgba($color: $negro, $alpha: .6);
+    opacity: 0;
+    transform: scale(0) translateY(90px);
+    transition: all .6s ease;
+    @media screen and (min-width: 768px) {
+        width: 500px;
+        left: unset;
+        right: 0;
+    }
+    &.active {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    form {
+        position: relative;
+        input[type='text'] {
+            outline: none;
+            border: 1px solid $gris2;
+            width: 100%;
+            padding: 10px 0 10px 10px;
+        }
+        .icono {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            color: $negro;
+        }
+    } 
+}
+
+.hero {
+    background-image: url(../img/bg-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    @media screen and (min-width: 768px) {
+        min-height: 500px;
+    }
+    position: relative;
+    color: $blanco;
+    transition: all 6s ease;
+}
+
+/*RESTO DE PÁGINAS*/
+.hero-general {
+    background-image: url(../img/bg-general2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 400px;
+    transition: all 6s ease;
+    h1 {
+        color: $blanco;
+        font-size: 60px;
+    }
+}

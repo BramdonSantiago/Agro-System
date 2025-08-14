@@ -1,0 +1,7 @@
+# Archivos con claves Stripe
+includes/functions/stripe/README.md
+includes/functions/enviar-pedido.php
+
+# Variables de entorno
+.env
+.env.local

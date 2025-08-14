@@ -1,0 +1,89 @@
+/*COLORES*/
+$gris: #F0F0F0;
+$gris2: #e0e0e0;
+$verdeClaro: #7DD888;
+$verdeFuerte: #25865B;
+$verdeFuerteHover: #167048;
+$negro: #333;
+
+body {
+    color: $negro;
+    // min-height: 100vh;
+    // display: flex;
+    // align-items: center;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.container {
+    max-width: 600px;
+}
+
+.columna-datos {
+    background-color: $gris;
+    position: relative;
+    padding: 20px 40px 90px 40px !important;
+}
+.titulo {
+    font-size: 25px;
+}
+.tus-datos {
+    border-bottom: 1px solid $gris2;
+    &.total {
+        margin-bottom: 40px;
+        border-bottom: none;
+    }
+}
+.subtitulo {
+    font-weight: bold;
+}
+.btn {
+    letter-spacing: 2px;
+    border: none;
+    font-weight: bold;
+    padding: 15px;
+    transition: all .6s ease;
+    &.pedido {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+    }
+    &.btn-primary {
+        background-color: $verdeFuerte !important;
+    }
+    &.btn-secondary {
+        background-color: $verdeClaro !important;
+        &:hover {
+            background-color: $verdeFuerte !important;
+        }
+    }
+}
+
+/**
+ * The CSS shown here will not be introduced in the Quickstart guide, but shows
+ * how you can use CSS to style your Element's container.
+ */
+.StripeElement {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
+}
+.StripeElement--focus {
+    box-shadow: 0 1px 3px 0 #cfd7df;
+}
+.StripeElement--invalid {
+    // border-color: #fa755a;
+    border-color:  #f70000;
+}
+.StripeElement--webkit-autofill {
+    background-color: #fefde5 !important;
+}

@@ -1,0 +1,112 @@
+/*COLORES*/
+$negro: #333;
+$verdeClaro: #7DD888;
+$verdeFuerte: #25865B;
+$gris: rgba(0, 0, 0, .2);
+$gris2: #f0f0f0;
+
+/*ESTILOS GENERALES*/
+body {
+    color: $negro;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn {
+    padding: 15px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: none !important;
+    &.btn-primary {
+        background-color: $verdeFuerte;
+    }
+    &.btn-secondary {
+        background-color: $verdeClaro;
+        transition: all .6s ease;
+        &:hover {
+            background-color: $verdeFuerte;
+        }
+    }
+}
+
+.swal2-popup.swal2-toast .swal2-title {
+    font-weight: bold !important;
+}
+
+/*FORMULARIO*/
+.formulario-datos-usuario {
+    input {
+        margin-bottom: 15px;
+        border-radius: 0;
+        &[type='text'] { 
+            display: inline-block;
+            padding: 15px 10px;
+            border: 1px solid $gris;
+            width: 100%;
+            outline: none;
+        }
+    }
+    a {
+        color: $verdeClaro;
+    }
+    select {
+        display: inline-block;
+        padding: 15px 10px;
+        border: 1px solid $gris;
+        width: 100%;
+        outline: none;
+        margin-bottom: 15px;
+    }
+}
+
+.resumen-pedido {
+    background-color: $gris2;
+    position: relative;
+    padding: 20px 40px;
+    .total {
+        p {
+            font-size: 20px;
+        }
+    }
+    ul.metodos-pago li {
+        margin-bottom: 20px;
+    }
+    input[type='submit'] {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    input[type='radio'] {
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
+    }
+    .opcion-pago {
+        cursor: pointer;
+    }
+}
+
+.table {
+    border: 2px solid $gris2;
+    img {
+        height: 90px;
+    }
+    th {
+        border-bottom-color: $gris2 !important;
+    }
+    td {
+        border-top: none;
+        vertical-align: unset;
+        white-space: nowrap;
+    }
+}
+
+.no-login p {
+    font-size: 22px;
+    a {
+        color: $verdeClaro;
+    }
+}
+

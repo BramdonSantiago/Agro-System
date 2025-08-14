@@ -1,0 +1,78 @@
+/*COLORES*/
+$verdeClaro: #7DD888;
+$verdeClaroTransparent: #7dd8883f;
+$verde: #25865B;
+$verdeFuerte: #0B1803;
+$verdeFuerte2: #060e01;
+$gris: #F0F0F0;
+$gris2: #808080;
+$blanco: #FFF;
+$negro: #333;
+
+body {
+    background-image: url(../img/bg-login2.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+}
+
+form {
+    width: 300px;
+    > div {
+        position: relative;
+    }
+    h1 {
+        display: inline-block;
+        color: $blanco;
+        border-bottom: 4px solid $verdeClaro;
+        padding: 20px 0;
+        margin-bottom: 40px;
+    }
+    input[type='text'],
+    input[type='password'] {
+        display: block;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $verdeClaroTransparent;
+        padding: 10px 40px;
+        margin-bottom: 20px;
+        color: $blanco;
+        font-size: 16px;
+        &::placeholder {
+            color: $gris2;
+        }
+    }
+    .icono {
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        // padding: 10px 0;
+        color: $blanco;
+        font-size: 16px;
+    }
+    input[type='submit'] {
+        display: block;
+        width: 100%;
+        letter-spacing: 2px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: $blanco;
+        transition: all .6s ease;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover {
+            color: $verdeClaro;
+        }
+    }
+}
+
+p {
+    color: $blanco;
+    position: absolute;
+    bottom: 0;
+}

@@ -1,0 +1,426 @@
+section.quimicos, 
+section.semillas,
+section.presentacion, 
+section.testimonios, 
+section.contador {
+    margin-top: 90px;
+}
+
+.pagina-principal-productos {
+    .producto-singular {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+.bg-titulos-productos {
+    background-size: cover;
+    height: 500px;
+    margin-bottom: 40px;
+    background-repeat: no-repeat;
+    // position: relative;
+    @media screen and (min-width: 1200px) {
+        height: auto;
+    }
+    &.bg-quimicos {
+        background-image: url(../img/bg-quimicos.jpg);
+    }
+    &.bg-semillas {
+        background-image: url(../img/bg-semillas.jpg);
+    }
+    .bg-brocha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    h2 {
+        position: absolute;
+        color: $verdeFuerte;
+        font-size: 35px;
+    }
+    @media screen and (min-width: 768px) {
+        margin-bottom: unset;
+    }
+} 
+
+.productos {
+    .ver-producto {
+        @media screen and (min-width: 1200px) {
+            display: none;
+        }
+    }
+    .producto {
+        position: relative;
+        // background-color: $gris;
+        transition: all .6s ease;
+        @media screen and (min-width: 1200px) {
+            &:hover > .bg-hover, 
+            &:hover > .bg-hover a {
+            opacity: 1;
+            transform: translateY(0);
+            }
+        }
+        .bg-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba($color: $negroPuro, $alpha: .4);
+            opacity: 0;
+            transition: all .6s ease;
+            .ver-producto-lg {
+                transform: translateY(20px);
+                transition: all .6s ease;
+                display: none;
+                @media screen and (min-width: 1200px) {
+                    display: block;
+                }
+            }
+        }
+    }
+    img {
+        // width: 200px;
+        height: 200px;
+    }
+    .nombre {
+        font-size: 16px;
+    }
+}
+.presentacion {
+    background-image: url(../img/bg-cta-presentacion.jpg);
+    color: $blanco;
+    padding: 60px 0;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    h2 {
+        font-size: 60px;
+        margin-bottom: 40px;
+    }
+    p {
+        margin-bottom: 40px;
+    }
+    a {
+        padding: 15px 40px;
+        .icono-video-presentacion {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+}
+
+.contador {
+    background-image: url(../img/bg-contador.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 120px 0;
+    color: $blanco;
+    text-align: center;
+    @media screen and (min-width: 1200px) {
+        .separador {
+            border-right: 1px solid $blanco3;
+        }
+    }
+    .numero, 
+    .signo {
+        font-size: 90px;
+        margin: 0;
+    }
+    .contador-titulo {
+        color: $blanco2;
+    }
+}
+
+.testimonios {
+    background-image: url(../img/bg-testimonios.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 60px 0 200px 0;
+    position: relative;
+    .testimonio {
+        background-color: $blanco;
+        position: relative;
+        .testimonio-contenido {
+            padding: 60px 0;
+        }
+        .adorno-superior1 {
+            position: absolute;
+            top: -20px;
+            left: 10%;
+            background-color:$blanco4;
+            height: 20px;
+            width: 80%;
+        }
+        .adorno-superior2 {
+            position: absolute;
+            top: -10px;
+            left: 5%;
+            background-color:$blanco4;
+            height: 20px;
+            width: 90%;
+        }
+    }
+    h2 {
+        font-size: 60px;
+        color: $blanco;
+        margin-bottom: 50px;
+    }
+    img {
+        border-radius: 50%;
+        margin-bottom: 40px;
+    }
+    .texto-testimonio {
+        margin-bottom: 40px;
+    }
+    .nombre {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .tipo-cliente {
+        color: $verdeClaro;
+        font-size: 14px;
+    }
+}
+
+.contactanos {
+    .container {
+        margin-top: 90px;
+    }
+    .bg-contactanos {
+        background-image: url(../img/bg-parallax.jpg);
+        // height: auto;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        position: relative;
+        min-height: 400px;
+        margin-bottom: 120px;
+        @media screen and (min-width: 1200px) {
+            min-height: 600px; 
+        }
+        .mancha {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            background-image: url(../img/bg-mancha.png);
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+        }
+        .brocha-verde {
+            position: absolute;
+            // bottom: 20px;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    input[type = 'text'],
+    input[type = 'email'],
+    textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        outline: none;
+        padding: 10px;
+        border: 1px solid $gris;
+    }
+    textarea {
+        min-height: 200px;
+        max-height: 400px;
+    }
+}
+
+/*PÁGINA PRODUCTOS*/
+.titulos-categoria-productos {
+    h2 {
+        font-size: 25px;
+    }
+}
+.pagina-productos {
+    .producto-singular {
+        flex: 0 0 calc(50% - 20px);
+        @media screen and (min-width: 1200px) {
+            flex: 0 0 calc(33.33% - 60px);
+        }
+    }
+}
+
+.detalle-producto {
+    img {
+        height: 400px;
+    }
+    .nombre {
+        font-family: 'Mansalva', cursive;
+        font-size: 30px;
+    }
+    .precio {
+        color: $verdeFuerte;
+        font-size: 20px;
+        // margin-bottom: 20px;
+    }
+    .marca {
+        span {
+            font-weight: bold;
+        }
+    }
+    .categoria {
+        span {
+            font-weight: bold;
+        }
+    }
+    .estado-inventario {
+        margin-bottom: 40px;
+        span {
+            font-weight: bold;
+        }
+    }
+    a {
+        padding: 20px;
+    }
+}
+
+/*PÁGINA VER CARRITO*/
+.table.ver-carrito {
+    border: 2px solid $gris;
+    th {
+        border-bottom: 2px solid $gris;
+    }
+    td {
+        vertical-align: unset;
+        border-top: none;
+        white-space: nowrap;
+    }
+    img {
+        height: 90px;
+    }
+    .icono-borrar {
+        display: inline-block;
+        color: rgba($blanco, .8);
+        background-color: rgba(247, 0, 0, .8);
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all .6s ease;
+        &:hover {
+            color: $blanco;
+            background-color: #F70000;
+        }
+    } 
+}
+.pagina-ver-carrito {
+    a {
+        padding: 20px 60px;
+    }
+    .total {
+        font-family: 'Mansalva', cursive;
+        margin-right: 20px;
+        .total-numero {
+            font-size: 40px;
+        }
+    }
+}
+
+/*ESTILOS PÁGINA PAGO*/
+.no-login {
+    p {
+        font-size: 22px;
+        a {
+            color: $verdeClaro;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/*ESTILOS PÁGINA DE NOSOTROS*/
+.mision-vision-valores {
+    background-image: url(../img/bg-hojasprueba2.jpg);
+    background-size: contain;
+    background-position: top;
+    background-repeat: repeat;
+    overflow: hidden;
+    @media screen and (min-width: 768px) {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    a {
+        font-family: 'Mansalva', cursive;
+        font-size: 20px;
+        &.active {
+            color: $verdeClaro !important;
+        }
+    }
+    p {
+        color: $grisPuro;
+    }
+}
+
+.nuestro-equipo {
+    background-color: $verdeFuerte;
+    color: $blanco;
+    .fotos-equipo {
+        img {
+            border-radius: 50%;
+            border: 10px solid $blanco;
+            filter: grayscale(100%);
+            transition: all .6s ease;
+            &:hover {
+                filter: grayscale(0);
+            }
+        }
+        h3 {
+            color: $blanco2;
+        }
+    }
+}
+
+.categorias-productos {
+    background-image: url(../img/bg-hojasprueba2.jpg);
+    background-size: contain;
+    background-position: top;
+    overflow: hidden;
+    background-repeat: repeat;
+    padding-top: 120px;
+    @media screen and (min-width: 768px) {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .categorias {
+        .subtitulo {
+            font-size: 20px;
+        }
+        p {
+            color: $grisPuro;
+        }
+    }
+}
+.titulo-nosotros {
+    font-size: 45px;
+    margin-bottom: 90px;
+}
+
+.mapa {
+    .google-maps {
+        width: 100%;
+        min-height: 400px;
+        max-height: 400px;
+    }
+}

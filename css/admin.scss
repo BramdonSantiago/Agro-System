@@ -1,0 +1,362 @@
+/*COLORES*/
+$verdeClaro: #7DD888;
+$verde: #25865B;
+$verdeFuerte: #0B1803;
+$verdeFuerte2: #060e01;
+$gris: #F0F0F0;
+$gris2: #808080;
+$gris3: #e0e0e0;
+$blanco: #FFF;
+$negro: #333;
+
+body {
+    color: $negro;
+}
+
+.swal2-popup.swal2-toast {
+    background: $blanco !important;
+    .swal2-title {
+        color: $negro !important;
+        font-weight: bold !important;
+    }
+}
+
+.btn {
+    letter-spacing: 2px;
+    border: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    &.btn-primary {
+        background-color: $verdeClaro !important;
+        transition: all .6s ease;
+        &:hover {
+            background-color: $verde !important;
+        }
+    }
+}
+
+.flecha-circular-izquierda {
+    @media (min-width: 320px) and (max-width: 992px) {
+        display: none !important;
+    }
+    @media screen and (min-width: 992px) {
+        &.no-active {
+            display: none;
+        }
+        &.active {
+            display: block;
+        }
+    }
+}
+.flecha-circular-derecha {
+    @media (min-width: 320px) and (max-width: 768px) {
+        display: none !important;
+    }
+    @media screen and (min-width: 768px) {
+        &.no-active {
+            display: none;
+        }
+        &.active {
+            display: block;
+        }
+    }
+}
+
+.header {
+    .icono {
+        font-size: 32px;
+        cursor: pointer;
+        color: $verdeClaro;;
+    }
+    .pedidos-numero {
+        display: inline-block;
+        background-color: $verdeClaro;
+        color: $blanco;
+        border-radius: 50%;
+        min-width: 32px;
+        min-height: 32px;
+        line-height: 32px;
+        text-align: center;
+        padding: 0 10px;
+        margin-left: 10px;
+        margin-right: 65px;
+        @media (min-width: 420px) and (max-width: 480px) {
+            margin-right: 140px;
+        }
+        @media (min-width: 480px) and (max-width: 576px) {
+            margin-right: 190px;
+        }
+        @media (min-width: 576px) and (max-width: 768px) {
+            margin-right: 250px;
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+            margin-right: 400px;
+        }
+        @media screen and (min-width: 992px) {
+            margin-right: 90px;
+        }
+    }
+    a {
+        color: $negro;
+        letter-spacing: 2px;
+        text-decoration: none;
+        transition: all .6s ease;
+        &:hover {
+            color: $verdeClaro;
+        }
+    }
+}
+
+.detalles-cliente {
+    span.bold {
+        font-weight: bold;
+    }
+}
+
+.admin {
+    .contenido {
+        min-height: 100vh;
+        .sidebar {
+            background-color: $verdeFuerte2;
+            color: $blanco;
+            transition: all .6s ease;
+            h2 {
+                background-color: $verdeClaro;
+                text-align: center;font-size: 25px;
+                padding: 25px 0;
+                margin: 0;
+                font-size: 25px;
+            }
+            a {
+                display: block;
+                color: $blanco;
+                padding:20px 40px;
+                text-decoration: none;
+                transition: all .6s ease;
+                &:hover {
+                    background-color: $gris;
+                    color: $negro;
+                }
+                .icono {
+                    margin-right: 10px;
+                    font-size: 25px;
+                    &.small {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .main {
+            background-color: $gris;
+            h3 {
+                color: $negro;
+                font-size: 22px;
+            }
+            .dashboard {
+                text-align: center;
+                background-color: $blanco;
+                border: 2px solid $gris;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                position: relative;
+                color: $gris2;
+                &.cuadrado {
+                    min-width: 100%;
+                    min-height: 200px;
+                    @media screen and (min-width: 768px) {
+                        min-width: 200px;
+                        min-height: 200px;
+                    }
+                }
+                &.rectangulo {
+                    min-width: 100%;
+                    min-height: 200px;
+                    @media screen and (min-width: 768px) {
+                        min-width: 400px;
+                        min-height: 200px;
+                    }
+                }
+                .numero {
+                    color: $verdeClaro;
+                    font-size: 65px;
+                    margin: 0;
+                    text-align: center;
+                }
+                .bg-arbol {
+                    position: absolute;
+                    right: 0;
+                    bottom: 5px;
+                    background-image: url(../img/bg-arbol2.png);
+                    min-width: 64px;
+                    min-height: 64px;
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+            .editar-producto {
+                img {
+                    height: 200px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    outline: none;
+    background-color: $blanco !important;
+    width: 200px;
+    @media screen and (min-width: 768px) {
+        width: 400px;
+    }
+    &:focus {
+        border: 1px solid $verde;
+        box-shadow: 0 0 10px 0 $verde;
+    }
+}
+
+.dataTables_wrapper .dataTables_length select {
+    outline: none;
+    background-color: $blanco !important;
+    &:focus {
+        border: 1px solid $verde;
+        box-shadow: 0 0 10px 0 $verde;
+    }
+}
+
+table.dataTable.no-footer {
+    border-bottom: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    transition: all .6s ease;
+    &:hover {
+        background: $verde !important;
+        border-color: transparent !important;
+    }
+    &.disabled {
+        background-color: transparent !important;
+    }
+    &.current {
+        &:hover {
+            background: linear-gradient(to bottom, white 0%, #dcdcdc 100%) !important;
+            border: 1px solid #979797 !important;
+        }
+    }
+}
+
+.table {
+    background-color: $blanco;
+    color: $negro;
+    font-size: 14px !important;
+    thead {
+        th {
+            border-bottom-color: $gris !important;
+            font-weight: normal !important;
+        }
+    }
+    th,
+    td {
+        border-top: none;
+        vertical-align: middle !important;
+        white-space: nowrap;
+    }
+    .editar {
+        color: $verde;
+    }
+    .icono {
+        cursor: pointer;
+        font-size: 20px;
+        transition: all .6s ease;
+        &:hover {
+            color: $verdeClaro;
+        }
+        &.basura {
+            display: inline-block;
+            color: rgba($blanco, .8);
+            background-color: rgba(247, 0, 0, .8);
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            &:hover {
+                color: $blanco;
+                background-color: #F70000;
+            }
+        } 
+    }
+    tbody {
+        tr {
+            transition: all .6s ease !important;
+            &:hover {
+                background-color: $gris3;
+            }
+        }
+    }
+}
+
+.table {
+    &.productos {
+        img {
+            height: 64px;
+        }
+    }
+}
+
+.footer {
+    // margin-top: 20px;
+    p {
+        margin: 0;
+        position: absolute;
+        bottom: 0;
+        margin-right: 25px;
+        // left: calc(50% - 188px);
+    }
+}
+
+form {
+    > div {
+        flex: 0 0 calc(50% - 10px);
+    }
+    .descripcion {
+        flex: 0 0 calc(100%);
+    }
+    input,
+    select {
+        margin-bottom: 20px;
+        &:focus {
+            box-shadow: 0 0 10px 0 $verde !important;
+            border-color: $verde !important;
+        }
+    }
+    textarea {
+        margin-bottom: 40px;
+        min-height: 100px;
+        max-height: 200px;
+        &:focus {
+            box-shadow: $verde !important;
+            border-color: $verde !important;
+        }
+    }
+}
+
+.table.detalles-pedido {
+    tr {
+        background-color: transparent !important;
+    }
+    img {
+        height: 60px;
+    }
+}
+
+.pedidos {
+    .estado-pedido {
+        border: 2px solid $gris3;
+        padding: 4px;
+        margin-right: 10px;
+    }
+}

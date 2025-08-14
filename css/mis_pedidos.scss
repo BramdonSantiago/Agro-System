@@ -1,0 +1,44 @@
+/*COLORES*/
+$bordeTabla: #f0f0f0;
+$verdeClaro:  #7DD888;
+$verdeFuerte: #25865B;
+
+.btn {
+    letter-spacing: 2px;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    transition: all .6s ease;
+    &.btn-primary {
+        background-color: $verdeClaro !important;
+        &:hover {
+            background-color: $verdeFuerte !important;
+        }
+    }
+}
+
+.fecha,
+.estado-entrega-td {
+    font-weight: bold;
+}
+
+table.table {
+    border: 2px solid $bordeTabla;
+    th {
+        font-weight: normal;
+        border-bottom: 2px solid $bordeTabla;
+        border-top: none !important;
+        white-space: nowrap;
+        &.numero_pedido {
+            font-weight: bold;
+        }
+    }
+    td {
+        vertical-align: middle !important;
+        border-top: 2px solid transparent !important;
+        white-space: nowrap;
+    }
+    img {
+        height: 60px;
+    }
+}
